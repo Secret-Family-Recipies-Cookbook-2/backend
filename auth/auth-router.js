@@ -11,7 +11,7 @@ function createToken(user) {
         username: user.username,
     };
 
-    const secret = process.env.JWT_SECRET || "top secret!";         //secret to be read by token
+    const secret = process.env.JWT_SECRET || "top secret!";         //secret to be read by tokensss
 
     const options = {
         expiresIn: "1d",                                    //expires in 1 day
