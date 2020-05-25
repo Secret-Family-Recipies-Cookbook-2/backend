@@ -33,20 +33,21 @@ module.exports = {
     },
   },
 
-  //heroku postgres
+  //heroku postgres or sqlite
   production: {
-      client: 'pg',     //npm i pg
-      connection: pgConnection,
-      pool: {
-          min: 2,
-          max: 10
-      },
-      migrations: {
-        directory: "./database/migrations",
-      },
-      seeds: {
-        directory: "./database/seeds",
-      },
-  },
+    client: 'postgresql',
+    connection: {
+        database: 'my_db',
+        user: 'username',
+        password: 'password'
+    },
+    pool: {
+        min: 2,
+        max: 10
+    },
+    migrations: {
+        tableName: 'knex_migrations'
+    }
+}
 
 };

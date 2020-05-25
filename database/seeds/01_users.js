@@ -5,8 +5,15 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {id: 1, username: 'lambda', password: "school", email: "lambdaschool@email.com"},
-        {id: 2, username: 'blue', password: "sky", email: "bluesky@email.com"}
+        {username: 'lambda', email: "lambdaschool@email.com",password:hashPassword('password')},
+        {username: 'blue',  email: "bluesky@email.com",password: hashPassword('password')}
       ]);
     });
+};
+
+const hashPassword = password => {
+  const bcrypt = require('bcryptjs');
+  const rounds = 12;
+  const hash = bcrypt.hashSync(password, rounds);
+  return hash;
 };

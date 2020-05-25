@@ -67,6 +67,7 @@ router.post('/:id/user',(req,res)=>{
         console.log(err)
         res.status(400).json({errorMessage:
              "Please make sure that title, source, ingredients, instructions, and category are present."})
+             //also user_id: number in post 
     })
 })
 

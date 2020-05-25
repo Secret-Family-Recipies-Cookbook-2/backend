@@ -5,6 +5,7 @@ secret family recipes back end
 
 # Base URL for Deployed API
 
+https://secretfamilyrecipes3.herokuapp.com/
 
 # Endpoints
 | Request | URL | Description |
