@@ -22,7 +22,7 @@ module.exports = {
   testing: {
     client: "sqlite3",
     connection: {
-      filename: "./database/test.db3",
+      filename: "./database/test.db3", // "./database/test.db3" or ":memory:"
     },
     useNullAsDefault: true,
     migrations: {
