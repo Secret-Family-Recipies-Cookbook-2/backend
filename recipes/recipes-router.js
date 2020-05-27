@@ -71,19 +71,6 @@ router.post('/:id/user',(req,res)=>{
     })
 })
 
-// router.post('/:id/user',(req,res)=>{
-//     const newRecipe = req.body;
-
-//     Recipes.addRecipe(newRecipe)
-//     .then((newRecipe)=>{
-//         res.status(200).json(newRecipe)
-//     })
-//     .catch((err)=>{
-//         console.log(err)
-//         res.status(400).json({errorMessage:
-//              "Please make sure that title, source, ingredients, instructions, and category are present."})
-//     })
-// })
 
 //PUT request- updates the recipe by id from the specific user's recipe list
 router.put('/:id',(req,res)=>{
