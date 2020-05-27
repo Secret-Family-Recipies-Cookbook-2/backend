@@ -3,13 +3,15 @@ const server = require('../api/server');
 
 const db = require('../database/dbConfig');
 
-afterEach(() => {
-    return db.migrate
-        .rollback()
-        .then(() => db.migrate.latest())
-        // .then(() => db.seed.run())
+//re-run seeds to get test passing
 
-})
+// afterEach(() => {
+//     return db.migrate
+//         .rollback()
+//         .then(() => db.migrate.latest())
+//         .then(() => db.seed.run())
+
+// })
 
 //POST  Register
 test("POST /api/auth/register   Check if register working", async () => {

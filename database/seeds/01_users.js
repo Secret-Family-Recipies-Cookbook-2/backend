@@ -13,7 +13,7 @@ exports.seed = function(knex) {
 
 const hashPassword = password => {
   const bcrypt = require('bcryptjs');
-  const rounds = 12;
+  const rounds = 8;
   const hash = bcrypt.hashSync(password, rounds);
   return hash;
 };
